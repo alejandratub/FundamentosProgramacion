@@ -1,0 +1,6 @@
+[Fri Apr 15 12:58:15.876305 2016] [mpm_prefork:notice] [pid 1574] AH00163: Apache/2.4.7 (Ubuntu) PHP/5.5.9-1ubuntu4.13 configured -- resuming normal operations
+[Fri Apr 15 12:58:15.876391 2016] [core:notice] [pid 1574] AH00094: Command line: 'apache2'
+[Fri Apr 15 12:58:39.911298 2016] [core:info] [pid 1580] [client 10.240.0.197:54552] AH00128: File does not exist: /home/ubuntu/workspace/HTML/ejer1.html.
+[Fri Apr 15 12:58:40.318766 2016] [core:info] [pid 1581] [client 10.240.0.167:34164] AH00128: File does not exist: /home/ubuntu/workspace/favicon.ico, referer: https://fp2016-alejandratub.c9users.io/HTML/ejer1.html.
+[Fri Apr 15 12:59:30.447261 2016] [core:info] [pid 1582] [client 10.240.0.165:38282] AH00128: File does not exist: /home/ubuntu/workspace/HTML/ejer1.html.
+[Fri Apr 15 13:01:30.926699 2016] [mpm_prefork:notice] [pid 1574] AH00169: caught SIGTERM, shutting down

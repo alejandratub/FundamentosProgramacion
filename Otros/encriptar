@@ -1,0 +1,56 @@
+#include<stdio.h>
+
+void encriptar(char* str1,int numero)
+{ int i=0;
+    while(str1[i]!='\0')
+    {
+        str1[i]=str1[i]+numero;
+        i++;
+    }
+    FILE* archivo;
+    archivo = fopen("escritura.txt", "a+");
+    printf("\nLa frase encriptada es:\n%s",str1);
+}
+void desencriptar(char* str1,int numero)
+{ int i=0;
+   
+    while(str1[i]!='\0')
+    {
+        str1[i]=str1[i]-numero;
+        i++;
+    }
+    FILE* archivo;
+    archivo = fopen("escritura.txt", "a+");
+      printf("\nLa frase desencriptada es:\n%s",str1);
+}
+
+int main()
+{
+    size_t bytes = 1;
+    int x;
+    int maxSize = 255;
+    char * linea = new char[maxSize];
+    linea[maxSize-1] = '\0';
+    FILE* archivo;
+    archivo = fopen("escritura.txt", "a+");
+   
+    if(archivo != NULL)
+    {
+        while(true)
+        {
+            printf("introduce una cadena: ");
+            getline(&linea, &bytes, stdin);
+             printf("introduce la variable : ");
+             scanf("%d",&x);
+            encriptar(linea,x);
+            fprintf(archivo, "%s\n", linea);
+            desencriptar(linea,x);
+            fprintf(archivo, "%s\n", linea);
+            break;
+        }
+    }
+    
+    delete [] linea;
+    fclose(archivo);
+    return 0;
+}
